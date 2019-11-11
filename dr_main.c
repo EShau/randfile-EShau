@@ -9,7 +9,8 @@ typedef unsigned long size_t;
 size_t convertToNumber(char * array, int n){
   size_t number = 0;
   size_t power = 1;
-  while (n){
+  n--;
+  while (n + 1){
     int digit = array[n] > 0 ? array[n] : array[n] * -1;
     digit = digit % 10;
     number += digit * power;
